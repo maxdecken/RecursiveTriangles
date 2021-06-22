@@ -50,6 +50,8 @@ public class SierpinskiPanel extends Panel {
     public void paint(Graphics g){
         int screenX = SierpinskiTriangle.frame.getWidth();
         int screenY = SierpinskiTriangle.frame.getHeight();
+        screenY = screenY - screenY/50;
+
         int s = (int) (screenY/Math.sin(Math.toRadians(60.0)));
 
         triangleRecursive(g, new int[] {(screenX/2 - s/2), (screenX/2), (screenX/2 + s/2)}, new int[] {screenY, 0, screenY}, 1);
